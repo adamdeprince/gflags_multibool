@@ -49,10 +49,10 @@ if __name__ == "__main__"
 And we now run this on the command line:
 
 ````bash
-# python demo_multibool.py 
-Verbosity level: 0
-# python demo_mutlibool.py -v -v -v 
-Verbosity level: 3 
-# python demo_multibool.py --verbose --verbose --noverbose
-Verbosity level: 1
+python demo_multibool.py 
+> Verbosity level: 0
+python demo_mutlibool.py -v -v -v 
+> Verbosity level: 3 
+python demo_multibool.py --verbose --verbose --noverbose
+> Verbosity level: 1
 ````
