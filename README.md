@@ -50,9 +50,11 @@ And we now run this on the command line:
 
 ````bash
 python demo_multibool.py 
-_Verbosity level: 0_
+Verbosity level: 0
+
 python demo_mutlibool.py -v -v -v 
-_Verbosity level: 3_
+Verbosity level: 3
+
 python demo_multibool.py --verbose --verbose --noverbose
-_Verbosity level: 1_
+Verbosity level: 1
 ````
