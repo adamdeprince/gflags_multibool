@@ -25,10 +25,10 @@ class GFlagsMultiFlags_Test(TestCase):
         self.assertVerbosity('', 0)
 
     def test_negative(self):
-        self.assertVerbosity('--noverbose', -1)
+        self.assertVerbosity('--noverbose', 0)
 
     def test_false(self):
-        self.assertVerbosity('--verbose=False', -1)
+        self.assertVerbosity('--verbose=False', 0)
 
     def test_positive(self):
         self.assertVerbosity('--verbose', 1)

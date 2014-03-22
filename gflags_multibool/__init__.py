@@ -29,10 +29,11 @@ class SumFlag(gflags.BooleanFlag):
         for item in arguments:
             # have Flag superclass parse argument, overwriting self.value reference
             gflags.BooleanFlag.Parse(self, item)  # also increments self.present
-            values += 1 if self.value else -1
+            if self.value is not None:
+                values += {True: 1, False: -1}[bool(self.value)]
 
         # put list of option values back in the 'value' attribute
-        self.value = values
+        self.value = max(0, values)
 
 
 def DEFINE_multiboolean(name, default, help, flag_values=FLAGS,
@@ -49,4 +50,6 @@ def DEFINE_multiboolean(name, default, help, flag_values=FLAGS,
   gflags.DEFINE_flag(SumFlag(name, default, help, **args),
               flag_values)
 
-__ALL__ = ["DEFINE_multiboolean"]
+DEFINE_multibool = DEFINE_multiboolean
+
+__ALL__ = ["DEFINE_multiboolean", "DEFINE_multibool"]
