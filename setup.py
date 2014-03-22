@@ -15,11 +15,11 @@ method called DEFINE_mutlibool that provides
 from setuptools import setup
 
 setup(
-    name="gflags-multibool",
+    name="python-gflags-multibool",
     version="0.0.0",
     author="Adam DePrince",
-    author_email="adeprince@googlealumni.com",
-    description="GFlags multibool",
+    author_email="deprince@googlealumni.com",
+    description="Python-glags multibooleam extension",
     long_description=__doc__,
     py_modules = [
         "gflags_multibool",

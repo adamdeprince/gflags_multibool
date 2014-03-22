@@ -21,7 +21,7 @@ Installation
 ============
 
 ````bash
-pip install gflags_multibool
+pip install python-gflags-multibool
 ````
 
 Example
